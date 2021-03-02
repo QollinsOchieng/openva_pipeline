@@ -1,12 +1,15 @@
 name = "openva_pipeline"
-from .runPipeline import runPipeline
-from .runPipeline import createTransferDB
-from .runPipeline import downloadBriefcase
-from .runPipeline import downloadSmartVA
-from .pipeline import Pipeline
-from .transferDB import TransferDB
-from .odk import ODK
-from .openVA import OpenVA
+try:
+    from .runPipeline import runPipeline
+    from .runPipeline import createTransferDB
+    from .runPipeline import downloadBriefcase
+    from .runPipeline import downloadSmartVA
+    from .pipeline import Pipeline
+    from .transferDB import TransferDB
+    from .odk import ODK
+    from .openVA import OpenVA
+except:
+    pass
 from .dhis import API
 from .dhis import VerbalAutopsyEvent
 from .dhis import create_db
