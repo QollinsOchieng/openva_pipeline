@@ -4,8 +4,10 @@ openva_pipeline.dhis
 
 This module posts VA records with assigned causes of death to a DHIS server.
 """
-
-from pysqlcipher3 import dbapi2 as sqlcipher
+try:
+    from pysqlcipher3 import dbapi2 as sqlcipher
+except:
+    pass
 import requests
 from pandas import read_csv
 from pandas import DataFrame
